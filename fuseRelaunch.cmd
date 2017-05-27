@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/binod/Desktop/Development/COde/xilinx_proj/MIPS_32_BIT/Processor_Processor_sch_tb_isim_beh.exe" -prj "C:/Users/binod/Desktop/Development/COde/xilinx_proj/MIPS_32_BIT/Processor_Processor_sch_tb_beh.prj" "work.Processor_Processor_sch_tb" 

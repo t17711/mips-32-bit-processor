@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/binod/Desktop/Development/COde/xilinx_proj/MIPS_32_BIT/Processor_Processor_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="processor_processor_sch_tb" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/processor_processor_sch_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/processor_clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">processor_clk_period</obj_property>
+      <obj_property name="ObjectShortName">processor_clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/ROM_1/i_rom_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_rom_en</obj_property>
+      <obj_property name="ObjectShortName">i_rom_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/FSM_1/o_fem_if" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_fem_if</obj_property>
+      <obj_property name="ObjectShortName">o_fem_if</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/FSM_1/o_fem_id" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_fem_id</obj_property>
+      <obj_property name="ObjectShortName">o_fem_id</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/FSM_1/o_fem_ex" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_fem_ex</obj_property>
+      <obj_property name="ObjectShortName">o_fem_ex</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/FSM_1/o_fem_me" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_fem_me</obj_property>
+      <obj_property name="ObjectShortName">o_fem_me</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/FSM_1/o_fem_wb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_fem_wb</obj_property>
+      <obj_property name="ObjectShortName">o_fem_wb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/FSM_1/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/PC_1/i_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pc[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_processor_sch_tb/UUT/PC_1/o_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_pc[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>
