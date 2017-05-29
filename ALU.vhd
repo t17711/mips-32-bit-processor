@@ -50,7 +50,7 @@ begin
 			r<= I_ALU_A+I_ALU_B;
 			O_ALU_Zero <='0';
 		elsif I_ALU_CTL = "0110" then
-			r<= I_ALU_A+I_ALU_B;
+			r<= I_ALU_A-I_ALU_B;
 			if I_ALU_A = I_ALU_B then
 				O_ALU_Zero <='0';
 			else

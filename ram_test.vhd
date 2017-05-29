@@ -27,7 +27,7 @@
 --------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
- 
+use ieee.std_logic_unsigned.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
@@ -82,10 +82,11 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
 		I_RAM_EN<='1';
-		I_RAM_ADDR<=x"000000fc";
+		I_RAM_ADDR<=x"00002000" + x"0000001";
 		I_RAM_DATA<=x"a1c1020c";
 		I_RAM_WE<='1';
       wait for 100 ns;	
+		I_RAM_DATA<=x"ffffffff";
 		I_RAM_WE<='0';
 		I_RAM_RE<='1';
 

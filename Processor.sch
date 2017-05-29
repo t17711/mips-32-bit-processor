@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <drawing version="7">
-    <attr value="spartan3a" name="DeviceFamilyName">
+    <attr value="spartan3e" name="DeviceFamilyName">
         <trait delete="all:0" />
         <trait editname="all:0" />
         <trait edittrait="all:0" />
@@ -301,7 +301,7 @@
             <blockpin signalname="XLXN_76(31:0)" name="I_RAM_DATA(31:0)" />
             <blockpin signalname="XLXN_134(31:0)" name="O_RAM_DATA(31:0)" />
         </block>
-        <block symbolname="ALUCTR" name="XLXI_26">
+        <block symbolname="ALUCTR" name="ALUCTR_1">
             <blockpin signalname="XLXN_152(1:0)" name="I_ALU_OP(1:0)" />
             <blockpin signalname="instruction(5:0)" name="I_ALU_FUNCT(5:0)" />
             <blockpin signalname="XLXN_151(3:0)" name="O_ALU_CTR(3:0)" />
@@ -486,7 +486,7 @@
             <wire x2="4560" y1="1456" y2="2416" x1="4560" />
             <wire x2="4816" y1="2416" y2="2416" x1="4560" />
         </branch>
-        <instance x="2560" y="1888" name="XLXI_26" orien="R0">
+        <instance x="2560" y="1888" name="ALUCTR_1" orien="R0">
         </instance>
         <branch name="XLXN_151(3:0)">
             <wire x2="3536" y1="1792" y2="1792" x1="3088" />

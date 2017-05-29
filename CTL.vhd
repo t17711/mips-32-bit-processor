@@ -44,6 +44,7 @@ end CTL;
 
 architecture Behavioral of CTL is
 	signal val: STD_LOGIC_VECTOR (6 downto 0):=(others => '0');
+	signal op: STD_LOGIC_VECTOR (1 downto 0):="00";
 	
 begin
 
@@ -56,27 +57,27 @@ begin
 				val<=(others => '0');
 				val(0)		<='1';
 				val(6) 		<='1';
-				O_CTL_ALUOp <="10";
+				op <="10";
 			when "001001" => -- addiu
 				val<=(others => '0');
 				val(5)		<='1';
 				val(6) 		<='1';
-				O_CTL_ALUOp <="00";
+				op <="00";
 			when "001000" => -- addi
 				val<=(others => '0');
 				val(5)		<='1';
 				val(6) 		<='1';
-				O_CTL_ALUOp <="00";
+				op <="00";
 				
 			when "101011" => -- sw
 				val<=(others => '0');
-				O_CTL_ALUOp 	<="00";
+				op 	<="00";
 				val(4)			<='1';
 				val(5)			<='1';
 				
 			when "000101" => -- bne
 				val<=(others => '0');
-				O_CTL_ALUOp 	<="01";				val(1) 			<='1';
+				op 	<="01";				val(1) 			<='1';
 				
 			when others =>
 				val<=(others => '0');
@@ -94,7 +95,7 @@ O_CTL_MemtoReg	<=	val(3);
 O_CTL_MemWrite	<=	val(4);
 O_CTL_ALUSrc	<=	val(5);
 O_CTL_RegWrite <=	val(6);
-
+O_CTL_ALUOp<=op;
 	
 end Behavioral;
 

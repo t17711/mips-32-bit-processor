@@ -20,35 +20,14 @@ at 0 ps, Instance /processor_processor_sch_tb/UUT/ram_1/ : Warning: CONV_INTEGER
 at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/ram_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(3), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-# restart
-# run 1.00us
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/ram_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-Finished circuit initialization process.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/ram_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/ram_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 15 ns(3), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
+at 6 ps(2), Instance /processor_processor_sch_tb/UUT/ram_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 6 ps(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 6 ps(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 6 ps(2), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 6 ps(3), Instance /processor_processor_sch_tb/UUT/reg_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+
+** Failure:Simulation stop at time 
+User(VHDL) Code Called Simulation Stop
+In process processor_test.vhd:tb 
+ 
+INFO: Simulator is stopped.

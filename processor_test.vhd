@@ -30,7 +30,7 @@ ARCHITECTURE behavioral OF Processor_Processor_sch_tb IS
    SIGNAL CLK	:	STD_LOGIC;
    SIGNAL EN	:	STD_LOGIC;
    SIGNAL XLXN_145		:	STD_LOGIC_VECTOR (31 DOWNTO 0);
-   constant processor_CLK_period : time := 10 ns;
+   constant processor_CLK_period : time := 5 ps;
 
 BEGIN
 
@@ -49,8 +49,10 @@ BEGIN
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
-   	EN<='0';      			wait for processor_CLK_period*1;
-		EN<='1';		wait for processor_CLK_period*30;
+			EN<='0';      			wait for processor_CLK_period*1;
+			EN<='1';					wait for processor_CLK_period*1;
+			wait for 1.6 ns;
+			assert false report "Simulation stop at time " severity failure;
 
    END PROCESS;
 -- *** End Test Bench - User Defined Section ***
