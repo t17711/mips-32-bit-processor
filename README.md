@@ -8,7 +8,7 @@ write the components as well as schematic in Xilinx software to combine
 them to create the processor. The final schematic for the processor
 after all the components have been combined is:
 
-![](./media/image1.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image1.png)
 
 This schematic follows the design of MIPS processor given in lab
 instruction. This design has 2 inputs. One clock and another enable
@@ -16,7 +16,7 @@ signal. The clock signal (CLK) and enable signal (EN) are passed to FSM
 module that is the controller for whole processor. When enable pin is
 on, the FSM starts and on every rising edge of clock FSM changes state.
 
-![](./media/image2.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image2.png)
 
 I also put an output because without an output pin Xilinx would discard
 the whole design without during optimization. Also it shows what value
@@ -28,7 +28,7 @@ which does not fit in smaller device so I used larger device to fit
 that. I used Spartan3E family, XC3S500E device and FG320 package to test
 and simulate on Xilinx.
 
-![](./media/image3.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image3.png)
 
 I created all the modules in VHDL and tested on Xilinx using this
 project setting.
@@ -90,7 +90,7 @@ stop after that.
 
 My Flow chart is:
 
-![](./media/image7.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image7.png)
 
 Based on flow chart we can see that each outputs are related to the
 current state of FSM.
@@ -108,7 +108,7 @@ Based on these connections we can see that FSM is the brain of
 Processor. I simulated this module by feeding a clock and non 0
 instruction as follows to see the flow.
 
-![](./media/image8.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image8.png)
 
 Here we can see that on every rising edge of clock IF, ID, EX, ME, WB
 output based on current state are enabled while others disabled. The
@@ -126,7 +126,7 @@ this module via other input I\_PC which is 32 bit input. It has output
 of 32 bit called O\_PC which is set to I\_PC when I\_PC\_UPDATE is
 enabled.
 
-![](./media/image9.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image9.png)
 
 This module has simple logic which says that if I\_PC is enabled set
 O\_PC to be same as I\_PC. However I had to create a register to store
@@ -138,7 +138,7 @@ of update more predictable.
 
 The simulation for this is:
 
-![](./media/image12.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image12.png)
 
 So we can see that it just updates the PC. Output becomes same as input
 when update signal is on.
@@ -178,9 +178,9 @@ so read 4^th^ byte in memory as most significant.
 
 Simulation of this code is:
 
-![](./media/image15.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image15.png)
 
-![](./media/image16.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image16.png)
 
 So we see the codes from Fibonacci as:
 
@@ -188,7 +188,7 @@ Line 1 = 0 = 00100000000010000010000000000000
 
 Line 2 = 4 = 00100100000010010000000000000001
 
-![](./media/image17.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image17.png)
 
 Line 15 = 56 = 00010101101011001111111111111001
 
@@ -215,7 +215,7 @@ output from adder.
 
 The simulation for this is:
 
-![](./media/image20.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image20.png)
 
 So we see that all the input is increased by 4.
 
@@ -232,7 +232,7 @@ specification.
 So I\_CTL\_EN is enable signal and I\_CTL\_INST is the 6 bit opcode from
 the output of ROM. I connect the input via Schematic using bus.
 
-![](./media/image22.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image22.png)
 
 Then I have switch case statement that checks what the opcode
 (I\_CTL\_INST) and sets the output when the control is enabled. The
@@ -341,7 +341,7 @@ register and only update the register value when enable signal is on.
 
 The simulation for this is:
 
-![](./media/image24.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image24.png)
 
 Here we can see how the output signals are changed same as in
 specification based on I\_CTL\_INST values.
@@ -361,7 +361,7 @@ The ports are:
 
 The simulation for this is:
 
-![](./media/image26.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image26.png)
 
 Here I see how the output is selected based on the selector signal.
 
@@ -395,7 +395,7 @@ byres of all 0 bit get inserted.
 
 The simulation for this is:
 
-![](./media/image31.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image31.png)
 
 So we can see that if 1^st^ bit is 0 output has 0 inserted to front else
 'f' is inserted.
@@ -424,7 +424,7 @@ Then if selector (I\_MUX\_SEL) is 1, the output is set to input 1
 
 My simulation for this is:
 
-![](./media/image36.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image36.png)
 
 Here we can see that based on control the output value is same as input
 1 when select is 2 and input 0 when select is 0.
@@ -437,7 +437,7 @@ its output O\_CTL\_ALU\_Src to 0. For i-type instruction, the selector
 is 1 and it outputs second input. The second input is sign extended
 immediate value. It is for I type instructions.
 
-![](./media/image37.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image37.png)
 
 ### MUX to select Next PC from between calculated BNE address and PC increment
 
@@ -451,7 +451,7 @@ says it is branch then the selector for this mux is 1 and it outputs
 branch add4ress. This output is then input for PC module which means
 next instruction address is selected by this MUX\>
 
-![](./media/image38.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image38.png)
 
 ### Mux to select either ALU result or RAM output to get the data to be written to register 
 
@@ -462,7 +462,7 @@ need to read RAM data and write to register. The selector for this
 instruction is CTL output O\_CTL\_MemtoReg. SO when it is on the
 register gets data from Memory (RAM).
 
-![](./media/image39.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image39.png)
 
 ADD2
 ----
@@ -506,7 +506,7 @@ for operation.
 
 I did the simulation if this as:
 
-![](./media/image44.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image44.png)
 
 Here based on ALU control I added inputs for 0010 and compared data for
 0110. When inputs are equal the output O\_ALU\_Zero is 1 else 0.
@@ -534,7 +534,7 @@ bytes above that address data in big endian. I converted the address to
 integer to access the data. Also based on specification the address for
 memory is organized as
 
-![](./media/image47.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image47.png)
 
 So, for memory I need to offset entered address by 0x00002000 i.e. 8192
 bytes. Then I access the memory.
@@ -543,7 +543,7 @@ While compiling this module, Xilinx software gave the error saying that
 my device could not slice the data due to lack of space so I had to use
 bigger device. After that I simulated the device as:
 
-![](./media/image49.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image49.png)
 
 Here I first write the data on address 8193 which gets adjusted by 8192
 to give address of 1. Then using bid endian it stores data a1c1020c
@@ -566,7 +566,7 @@ Processor
 I created a waveform simulation that shows the data in register \$t1
 (\$9), \$t2 (\$10) and \$t3 (\$11).
 
-![](./media/image50.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image50.png)
 
 Here we can see how registers are initialized to \$9=1, \$10=0, and \$11
 =1;
@@ -578,9 +578,9 @@ design calculates the Fibonacci sequence.
 
 My over all simulation wave is
 
-![](./media/image51.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image51.png)
 
-![](./media/image52.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image52.png)
 
 I ran the simulation for 1.6 ns using following test code:
 
@@ -598,7 +598,7 @@ Deliverables
     to register. I added it because Xilinx gave error during
     optimization saying there was no output and discarded my schematic.
 
-> ![](./media/image54.png)
+> ![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image54.png)
 
 1.  My demonstration for each of 5 instructions are:
 
@@ -612,7 +612,7 @@ a.  Addu
 >
 > In my wave form we can see it as:
 >
-> ![](./media/image55.png)
+> ![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image55.png)
 >
 > Based on above waveform the addu gave following specification:
 
@@ -644,7 +644,7 @@ loop. It should be at PC = 13\*4 = 52 = 0x00000034.
 
 So graph for this is:
 
-![](./media/image56.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image56.png)
 
   |Signal          |Value        |Note
   |--------------- |------------ |---------------
@@ -676,7 +676,7 @@ which translates to addiu, \$t0, 0x00000001. This happened in line 1 in
 
 The wave simulation of this is:
 
-![](./media/image57.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image57.png)
 
 The description of this is:
 
@@ -715,7 +715,7 @@ And code is:
 
 0b10101101000010110000000000000000 or 0xad0b0000
 
-> ![](./media/image58.png)
+> ![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image58.png)
 
   |Signal          |Value        |Note
   |---			  |---
@@ -753,7 +753,7 @@ line so PC = 14\*4 = 56 = 0x00000038.
 
 My simulation for this is:
 
-> ![](./media/image59.png)
+> ![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image59.png)
 
   |Signal          |Value        |Note
   |----			   |---			 |---
@@ -776,7 +776,7 @@ My simulation for this is:
 
 1.  My processor starts when enable signal is on.
 
-![](./media/image60.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image60.png)
 
 Here we can see that after enable signal is sent PC increments, FSM
 state increment and ROM outputs the code.
@@ -785,14 +785,14 @@ My processor ends when the code runs out. Since ROM is initialized to
 0s, after the PC points to the ROM address that does not have the code
 my program goes to end state.
 
-![](./media/image61.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image61.png)
 
 Here code is null, so state becomes s\_end. Then state does not change
 and no change happens in Processor.
 
 1.  MY memory contents after Fibonacci is calculated is
 
-![](./media/image62.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image62.png)
 
 This is Fib stored on RAM address 0. By big endian memory has
 
@@ -800,7 +800,7 @@ This is Fib stored on RAM address 0. By big endian memory has
   |------ |------ |------ |------
   |0x00   |0x00   |0x00   |0x01
 
-![](./media/image62.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image62.png)
 
 Similarly this is for second stores fib on address 4:
 
@@ -810,7 +810,7 @@ Similarly this is for second stores fib on address 4:
 
 For last fibs we have
 
-![](./media/image62.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image62.png)
 
   |32     |33     |34     |35
   |------ |------ |------ |--------------------
@@ -828,7 +828,7 @@ This is correct sequence.
 
 My whole memory snapshot is:
 
-![](./media/image62.png)
+![](https://github.com/t17711/mips-32-bit-processor/raw/master/media/image62.png)
 
 So, I have
 
