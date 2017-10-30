@@ -8,8 +8,7 @@ write the components as well as schematic in Xilinx software to combine
 them to create the processor. The final schematic for the processor
 after all the components have been combined is:
 
-![](./myMediaFolder/media/image1.png){width="6.5in"
-height="3.6640004374453192in"}
+![](./media/image1.png)
 
 This schematic follows the design of MIPS processor given in lab
 instruction. This design has 2 inputs. One clock and another enable
@@ -17,8 +16,7 @@ signal. The clock signal (CLK) and enable signal (EN) are passed to FSM
 module that is the controller for whole processor. When enable pin is
 on, the FSM starts and on every rising edge of clock FSM changes state.
 
-![](./myMediaFolder/media/image2.png){width="3.5759995625546805in"
-height="2.0084383202099736in"}
+![](./media/image2.png)
 
 I also put an output because without an output pin Xilinx would discard
 the whole design without during optimization. Also it shows what value
@@ -30,8 +28,7 @@ which does not fit in smaller device so I used larger device to fit
 that. I used Spartan3E family, XC3S500E device and FG320 package to test
 and simulate on Xilinx.
 
-![](./myMediaFolder/media/image3.png){width="5.478628608923884in"
-height="4.063999343832021in"}
+![](./media/image3.png)
 
 I created all the modules in VHDL and tested on Xilinx using this
 project setting.
@@ -93,8 +90,7 @@ stop after that.
 
 My Flow chart is:
 
-![](./myMediaFolder/media/image7.png){width="6.775in"
-height="8.417910104986877in"}
+![](./media/image7.png)
 
 Based on flow chart we can see that each outputs are related to the
 current state of FSM.
@@ -112,8 +108,7 @@ Based on these connections we can see that FSM is the brain of
 Processor. I simulated this module by feeding a clock and non 0
 instruction as follows to see the flow.
 
-![](./myMediaFolder/media/image8.png){width="5.635416666666667in"
-height="2.2708333333333335in"}
+![](./media/image8.png)
 
 Here we can see that on every rising edge of clock IF, ID, EX, ME, WB
 output based on current state are enabled while others disabled. The
@@ -131,8 +126,7 @@ this module via other input I\_PC which is 32 bit input. It has output
 of 32 bit called O\_PC which is set to I\_PC when I\_PC\_UPDATE is
 enabled.
 
-![](./myMediaFolder/media/image9.png){width="3.2096653543307085in"
-height="1.0820898950131235in"}
+![](./media/image9.png)
 
 This module has simple logic which says that if I\_PC is enabled set
 O\_PC to be same as I\_PC. However I had to create a register to store
@@ -144,8 +138,7 @@ of update more predictable.
 
 The simulation for this is:
 
-![](./myMediaFolder/media/image12.png){width="6.498559711286089in"
-height="0.5670286526684164in"}
+![](./media/image12.png)
 
 So we can see that it just updates the PC. Output becomes same as input
 when update signal is on.
@@ -185,11 +178,9 @@ so read 4^th^ byte in memory as most significant.
 
 Simulation of this code is:
 
-![](./myMediaFolder/media/image15.png){width="6.072916666666667in"
-height="0.4583333333333333in"}
+![](./media/image15.png)
 
-![](./myMediaFolder/media/image16.png){width="6.542477034120735in"
-height="0.9776115485564304in"}
+![](./media/image16.png)
 
 So we see the codes from Fibonacci as:
 
@@ -197,8 +188,7 @@ Line 1 = 0 = 00100000000010000010000000000000
 
 Line 2 = 4 = 00100100000010010000000000000001
 
-![](./myMediaFolder/media/image17.png){width="6.595274496937883in"
-height="0.8582086614173229in"}
+![](./media/image17.png)
 
 Line 15 = 56 = 00010101101011001111111111111001
 
@@ -225,8 +215,7 @@ output from adder.
 
 The simulation for this is:
 
-![](./myMediaFolder/media/image20.png){width="6.5in"
-height="0.5548611111111111in"}
+![](./media/image20.png)
 
 So we see that all the input is increased by 4.
 
@@ -243,8 +232,7 @@ specification.
 So I\_CTL\_EN is enable signal and I\_CTL\_INST is the 6 bit opcode from
 the output of ROM. I connect the input via Schematic using bus.
 
-![](./myMediaFolder/media/image22.png){width="2.9380818022747155in"
-height="2.753731408573928in"}
+![](./media/image22.png)
 
 Then I have switch case statement that checks what the opcode
 (I\_CTL\_INST) and sets the output when the control is enabled. The
@@ -353,8 +341,7 @@ register and only update the register value when enable signal is on.
 
 The simulation for this is:
 
-![](./myMediaFolder/media/image24.png){width="6.84339457567804in"
-height="2.0820898950131235in"}
+![](./media/image24.png)
 
 Here we can see how the output signals are changed same as in
 specification based on I\_CTL\_INST values.
@@ -374,8 +361,7 @@ The ports are:
 
 The simulation for this is:
 
-![](./myMediaFolder/media/image26.png){width="5.78125in"
-height="1.125in"}
+![](./media/image26.png)
 
 Here I see how the output is selected based on the selector signal.
 
@@ -409,7 +395,7 @@ byres of all 0 bit get inserted.
 
 The simulation for this is:
 
-![](./myMediaFolder/media/image31.png){width="6.5in" height="0.44375in"}
+![](./media/image31.png)
 
 So we can see that if 1^st^ bit is 0 output has 0 inserted to front else
 'f' is inserted.
@@ -438,8 +424,7 @@ Then if selector (I\_MUX\_SEL) is 1, the output is set to input 1
 
 My simulation for this is:
 
-![](./myMediaFolder/media/image36.png){width="5.697916666666667in"
-height="1.0416666666666667in"}
+![](./media/image36.png)
 
 Here we can see that based on control the output value is same as input
 1 when select is 2 and input 0 when select is 0.
@@ -452,8 +437,7 @@ its output O\_CTL\_ALU\_Src to 0. For i-type instruction, the selector
 is 1 and it outputs second input. The second input is sign extended
 immediate value. It is for I type instructions.
 
-![](./myMediaFolder/media/image37.png){width="3.3962259405074366in"
-height="2.0697003499562556in"}
+![](./media/image37.png)
 
 ### MUX to select Next PC from between calculated BNE address and PC increment
 
@@ -467,8 +451,7 @@ says it is branch then the selector for this mux is 1 and it outputs
 branch add4ress. This output is then input for PC module which means
 next instruction address is selected by this MUX\>
 
-![](./myMediaFolder/media/image38.png){width="2.4632819335083114in"
-height="0.7537314085739283in"}
+![](./media/image38.png)
 
 ### Mux to select either ALU result or RAM output to get the data to be written to register 
 
@@ -479,8 +462,7 @@ need to read RAM data and write to register. The selector for this
 instruction is CTL output O\_CTL\_MemtoReg. SO when it is on the
 register gets data from Memory (RAM).
 
-![](./myMediaFolder/media/image39.png){width="2.201492782152231in"
-height="1.2484076990376203in"}
+![](./media/image39.png)
 
 ADD2
 ----
@@ -524,8 +506,7 @@ for operation.
 
 I did the simulation if this as:
 
-![](./myMediaFolder/media/image44.png){width="6.197916666666667in"
-height="1.4895833333333333in"}
+![](./media/image44.png)
 
 Here based on ALU control I added inputs for 0010 and compared data for
 0110. When inputs are equal the output O\_ALU\_Zero is 1 else 0.
@@ -553,8 +534,7 @@ bytes above that address data in big endian. I converted the address to
 integer to access the data. Also based on specification the address for
 memory is organized as
 
-![](./myMediaFolder/media/image47.png){width="4.927083333333333in"
-height="1.1875in"}
+![](./media/image47.png)
 
 So, for memory I need to offset entered address by 0x00002000 i.e. 8192
 bytes. Then I access the memory.
@@ -563,8 +543,7 @@ While compiling this module, Xilinx software gave the error saying that
 my device could not slice the data due to lack of space so I had to use
 bigger device. After that I simulated the device as:
 
-![](./myMediaFolder/media/image49.png){width="6.5in"
-height="3.7247714348206475in"}
+![](./media/image49.png)
 
 Here I first write the data on address 8193 which gets adjusted by 8192
 to give address of 1. Then using bid endian it stores data a1c1020c
@@ -587,8 +566,7 @@ Processor
 I created a waveform simulation that shows the data in register \$t1
 (\$9), \$t2 (\$10) and \$t3 (\$11).
 
-![](./myMediaFolder/media/image50.png){width="6.5in"
-height="1.4458333333333333in"}
+![](./media/image50.png)
 
 Here we can see how registers are initialized to \$9=1, \$10=0, and \$11
 =1;
@@ -600,11 +578,9 @@ design calculates the Fibonacci sequence.
 
 My over all simulation wave is
 
-![](./myMediaFolder/media/image51.png){width="5.706911636045494in"
-height="3.5729166666666665in"}
+![](./media/image51.png)
 
-![](./myMediaFolder/media/image52.png){width="5.59375in"
-height="3.785386045494313in"}
+![](./media/image52.png)
 
 I ran the simulation for 1.6 ns using following test code:
 
@@ -622,8 +598,7 @@ Deliverables
     to register. I added it because Xilinx gave error during
     optimization saying there was no output and discarded my schematic.
 
-> ![](./myMediaFolder/media/image54.png){width="3.9479166666666665in"
-> height="2.0208333333333335in"}
+> ![](./media/image54.png)
 
 1.  My demonstration for each of 5 instructions are:
 
@@ -637,8 +612,7 @@ a.  Addu
 >
 > In my wave form we can see it as:
 >
-> ![](./myMediaFolder/media/image55.png){width="4.776052055993001in"
-> height="4.697916666666667in"}
+> ![](./media/image55.png)
 >
 > Based on above waveform the addu gave following specification:
 
@@ -670,8 +644,7 @@ loop. It should be at PC = 13\*4 = 52 = 0x00000034.
 
 So graph for this is:
 
-![](./myMediaFolder/media/image56.png){width="5.34375in"
-height="5.197916666666667in"}
+![](./media/image56.png)
 
   |Signal          |Value        |Note
   |--------------- |------------ |---------------
@@ -703,8 +676,7 @@ which translates to addiu, \$t0, 0x00000001. This happened in line 1 in
 
 The wave simulation of this is:
 
-![](./myMediaFolder/media/image57.png){width="4.791666666666667in"
-height="5.09375in"}
+![](./media/image57.png)
 
 The description of this is:
 
@@ -743,8 +715,7 @@ And code is:
 
 0b10101101000010110000000000000000 or 0xad0b0000
 
-> ![](./myMediaFolder/media/image58.png){width="4.8125in"
-> height="6.250872703412074in"}
+> ![](./media/image58.png)
 
   |Signal          |Value        |Note
   |---			  |---
@@ -782,8 +753,7 @@ line so PC = 14\*4 = 56 = 0x00000038.
 
 My simulation for this is:
 
-> ![](./myMediaFolder/media/image59.png){width="4.083333333333333in"
-> height="3.8125in"}
+> ![](./media/image59.png)
 
   |Signal          |Value        |Note
   |----			   |---			 |---
@@ -806,8 +776,7 @@ My simulation for this is:
 
 1.  My processor starts when enable signal is on.
 
-![](./myMediaFolder/media/image60.png){width="4.572916666666667in"
-height="4.53125in"}
+![](./media/image60.png)
 
 Here we can see that after enable signal is sent PC increments, FSM
 state increment and ROM outputs the code.
@@ -816,16 +785,14 @@ My processor ends when the code runs out. Since ROM is initialized to
 0s, after the PC points to the ROM address that does not have the code
 my program goes to end state.
 
-![](./myMediaFolder/media/image61.png){width="5.71875in"
-height="4.416666666666667in"}
+![](./media/image61.png)
 
 Here code is null, so state becomes s\_end. Then state does not change
 and no change happens in Processor.
 
 1.  MY memory contents after Fibonacci is calculated is
 
-![](./myMediaFolder/media/image62.png){width="6.5in"
-height="1.0416666666666667in"}
+![](./media/image62.png)
 
 This is Fib stored on RAM address 0. By big endian memory has
 
@@ -833,8 +800,7 @@ This is Fib stored on RAM address 0. By big endian memory has
   |------ |------ |------ |------
   |0x00   |0x00   |0x00   |0x01
 
-![](./myMediaFolder/media/image62.png){width="6.5in"
-height="1.0208333333333333in"}
+![](./media/image62.png)
 
 Similarly this is for second stores fib on address 4:
 
@@ -844,8 +810,7 @@ Similarly this is for second stores fib on address 4:
 
 For last fibs we have
 
-![](./myMediaFolder/media/image62.png){width="6.5in"
-height="2.1041666666666665in"}
+![](./media/image62.png)
 
   |32     |33     |34     |35
   |------ |------ |------ |--------------------
@@ -863,8 +828,7 @@ This is correct sequence.
 
 My whole memory snapshot is:
 
-![](./myMediaFolder/media/image62.png){width="6.5in"
-height="7.927083333333333in"}
+![](./media/image62.png)
 
 So, I have
 
