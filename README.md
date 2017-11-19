@@ -1,3 +1,10 @@
+## Setup ##
+- Xilinx webpack the free version
+- then import modules .vhd, 
+- may need to convert some modules into symbols again
+- The code to execute is in Fibonacchi.bin
+- the RAM module is direct copy of project instruction
+
 Introduction
 ============
 
